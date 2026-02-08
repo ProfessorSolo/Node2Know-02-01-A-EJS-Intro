@@ -120,8 +120,8 @@ main {
   padding: 4rem 1rem;
 }
 
-/* Profile Card */
-.profile-card {
+/* Card Component */
+.card {
   background: #1a1a1a;
   border: 1px solid var(--brand-primary);
   border-radius: 12px;
@@ -136,7 +136,7 @@ main {
 }
 
 /* "Tech" corners/decorations */
-.profile-card::before {
+.card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -147,7 +147,7 @@ main {
   z-index: 10;
 }
 
-.profile-header {
+.card header {
   background: linear-gradient(135deg, rgba(91, 91, 247, 0.1), rgba(255, 46, 159, 0.1));
   padding: 3rem 2rem;
   text-align: center;
@@ -155,7 +155,7 @@ main {
   border-bottom: 1px solid var(--glass-border);
 }
 
-.profile-image {
+.avatar {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -166,12 +166,12 @@ main {
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.profile-image:hover {
+.avatar:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px var(--brand-accent);
 }
 
-.profile-header h2 {
+.card header h2 {
   font-family: var(--font-heading);
   color: var(--text-primary);
   font-size: 2.2rem;
@@ -180,7 +180,7 @@ main {
   text-transform: uppercase;
 }
 
-.profile-header h3 {
+.card header h3 {
   font-family: var(--font-code);
   color: var(--brand-secondary);
   font-weight: 400;
@@ -189,11 +189,11 @@ main {
   text-transform: uppercase;
 }
 
-.profile-body {
+.card section {
   padding: 2.5rem;
 }
 
-.profile-body .bio {
+.card section .bio {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   color: var(--brand-accent);
@@ -208,18 +208,18 @@ main {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.profile-body p {
+.card section p {
   margin-bottom: 1.5rem;
   color: #ccc; /* Slightly softer than pure white for reading */
 }
 
-.profile-body strong {
+.card section strong {
   color: var(--text-primary);
   font-weight: 700;
   color: var(--brand-secondary);
 }
 
-.profile-body h4 {
+.card section h4 {
   color: var(--brand-primary);
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -231,14 +231,14 @@ main {
   padding-right: 2rem;
 }
 
-.profile-body ul {
+.card section ul {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns for tech spec look */
   gap: 1rem;
 }
 
-.profile-body ul li {
+.card section ul li {
   padding: 0.75rem 1rem;
   background: rgba(91, 91, 247, 0.05);
   border-left: 3px solid var(--brand-secondary);
@@ -248,7 +248,7 @@ main {
   transition: all 0.2s ease;
 }
 
-.profile-body ul li:hover {
+.card section ul li:hover {
   background: rgba(91, 91, 247, 0.15);
   box-shadow: -2px 0 10px rgba(255, 46, 159, 0.3);
   transform: translateX(4px);
@@ -287,11 +287,11 @@ footer {
     gap: 1rem;
   }
   
-  .profile-body ul {
+  .card section ul {
     grid-template-columns: 1fr;
   }
 
-  .profile-card {
+  .card {
     border-radius: 0;
     margin: -4rem -1rem;
     max-width: 100vw;
